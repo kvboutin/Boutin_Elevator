@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Control {
@@ -12,7 +13,7 @@ public class Control {
 		int start = 0;
 		try {
 			start = input.nextInt();
-		} catch (Exception e) {
+		} catch (InputMismatchException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

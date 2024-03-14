@@ -1,19 +1,20 @@
 
 public class Elevator {
-	public final int RATE = 10;
-	public int floor;
+	public int floor;				//current floor the elevator is on
+	public final int RATE = 10;		//constant time it takes to change 1 floor
 	
-	public Elevator() {
+	public Elevator() {				//default elevator starts on the first floor
 		super();
-		this.floor = 0;
+		this.floor = 1;
 	}
 	
-	public Elevator(int floor) {
+	public Elevator(int floor) {	//constructor that sets floor
 		super();
 		this.floor = floor;
 	}
 	
-	public int change_floor() {
-		return 0;
+	public int change_floor(int destination) { //returns the time it took to get to the given floor
+		int time = (Math.abs(floor - destination))*RATE;
+		return time;
 	}
 }
