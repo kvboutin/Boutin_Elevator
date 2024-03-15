@@ -61,6 +61,33 @@ public class Control {
 			checkIn = false;
 		}
 	}
+	
+	public void tests() {
+		Elevator testElevator = new Elevator();
+		Trip test = new Trip();
+		
+		System.out.println("Running Tests");
+		//Test 1: No change
+		test.setStart_floor(1);
+		test.setStops(new int[] {1, 1});
+		System.out.println("Expected value: 0, Result: " + test.take_trip(testElevator));
+		
+		//Test 2: Simple
+		test.setStart_floor(1);
+		test.setStops(new int[] {1, 2, 3, 4});
+		System.out.println("Expected value: 30, Result: " + test.take_trip(testElevator));
+		
+		//Test 3: Different starting floor
+		test.setStart_floor(5);
+		test.setStops(new int [] {5, 2, 3, 4});
+		System.out.println("Expected value: 50, Result: " + test.take_trip(testElevator));
+		
+		//Test 4: Long Trip
+		test.setStart_floor(3);
+		test.setStops(new int [] {3, 5, 24, 5, 7, 18, 1});
+		System.out.println("Expected value: 700, Result: " + test.take_trip(testElevator));
+		
+	}
 
 	public static void main(String[] args) {	//Store objects and call methods
 		Control control = new Control();
@@ -68,10 +95,12 @@ public class Control {
 		control.getUserStart();
 		control.getUserVisits();
 
-		Trip test = new Trip(control.start, control.visits);
-		Elevator elevator1 = new Elevator();
+		Trip trip = new Trip(control.start, control.visits);
+		Elevator elevator = new Elevator();
 
-		System.out.println("Time and floors visited: " + test.take_trip(elevator1) + ", " + Arrays.toString(control.visits));
+		System.out.println("Time and floors visited: " + trip.take_trip(elevator) + ", " + Arrays.toString(control.visits));
+		
+		control.tests();
 	}
 
 }

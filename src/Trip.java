@@ -35,4 +35,8 @@ public class Trip {
 	public void setStops(int[] stops) {
 		this.stops = stops;
 	}
+
+	public void setStart_floor(int start_floor) {
+		this.start_floor = start_floor;
+	}
 }
