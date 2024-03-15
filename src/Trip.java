@@ -1,3 +1,7 @@
+/**
+ * Stores information and methods needed for taking a trip on an elevator.
+ */
+
 
 public class Trip {
 	public int start_floor;			//the start floor

@@ -1,6 +1,5 @@
 /**
  * Control contains main, manages I/O and stores the elevator and trip objects.
- * Also, contains a method to further test the code.
  */
 
 import java.util.Arrays;
@@ -62,8 +61,6 @@ public class Control {
 			checkIn = false;
 		}
 	}
-	
-	
 
 	public static void main(String[] args) {	//Store objects and call methods
 		Control control = new Control();

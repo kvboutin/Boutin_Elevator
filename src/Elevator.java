@@ -1,3 +1,6 @@
+/**
+ * Stores information and methods for using an elevator
+ */
 
 public class Elevator {
 	public int floor;				//current floor the elevator is on
